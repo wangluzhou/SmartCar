@@ -85,19 +85,16 @@ R_Motor = GPIO.PWM(PWMB, 255)
 R_Motor.start(0)
 
 try:
-    while True:
-        import time
-        speed = 25
-        t_up(speed, 3)
-        print("t_up 3s")
-        t_down(speed, 3)
-        print("t_down 3s")
-        t_left(speed, 2)
-        print("t_left")
-        t_right(speed, 2)
-        print("t_right")
-
-
+    import time
+    speed = 25
+    t_up(speed, 3)
+    print("t_up 3s")
+    t_down(speed, 3)
+    print("t_down 3s")
+    t_left(speed, 2)
+    print("t_left")
+    t_right(speed, 2)
+    print("t_right")
 except KeyboardInterrupt:
     GPIO.cleanup()
     # 结束进程
